@@ -1,0 +1,41 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pagina principal</title>
+	<link rel="stylesheet" type="text/css" href="source/css/estilo.css">
+	<script type="text/javascript" src="source/js/jquery.js"></script>
+</head>
+<body>
+<div id="contenedor">
+	<div id="menu">  
+        <div class="fondo"><span class="boton_menu" id="boton_registro" onclick="setVista(event);">registro</span></div>  
+        <div class="fondo"><span class="boton_menu" id="boton_verUsuarios" onclick="">Ver usuarios</span></div>
+        <div class="fondo"><span class="boton_menu" id="boton_informacion" onclick="">Información</span></div>  
+        <div class="fondo"><span class="boton_menu" id="boton_ajunstes" onclick="">Ajustes</span></div> 
+        <div class="fondo"><span class="boton_menu" id="boton_cerrar" onclick="">Cerrar Sesion</span></div>   
+     </div>  
+	<div id="informacion"  class="seccion">
+		<div class="formulario">
+			<input class="input" type="text" name="nombre_registro" id="nombre_registro" placeholder="Nombres">
+			<input class="input" type="text" name="apellido_1" id="apellido_1" placeholder="Apellido Paterno">
+			<input class="input" type="text" name="apellido_2" id="apellido_2" placeholder="Apellido Materno">
+			<input class="input" type="text" name="telefono" id="telefono" placeholder="telefono">
+			<input class="input" type="text" name="correo_registro" id="correo_registro" placeholder="correo" onkeyup="comprobarCorreo(event);">
+			<input class="input" type="text" name="correo_registro2" id="correo_registro2" placeholder="comprobar correo" onkeyup="comprobarCorreo(event);">
+			<input class="input" type="password" name="contra_registro" id="contra_registro"  placeholder="contraseña" onkeyup="comprobarContra(event);">
+			<input class="input" type="password" name="contra_registro" id="contra_registro2" placeholder="comprobar contraseña" onkeyup="comprobarContra(event);">
+			<p id="error_vacios">Es necesario llenar los campos</p>
+			<p id="error_de_Contra">Las contraseñas no existen</p>
+			<button type="submit" id="regis" onclick="registro();">Registrar</button>
+			<p id="error_de_Comprobacion">El correo ya existe</p>	
+		</div> 
+	</div>
+	<div class="seccion" id="contenedor_ver_usuario" style="display: none;">
+			<p class="input">hola</p>
+	</div>
+
+</div>
+<script type="text/javascript" src="source/js/lienzo.js"></script>
+</body>
+</html>
