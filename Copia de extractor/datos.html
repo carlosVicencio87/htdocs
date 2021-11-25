@@ -1,0 +1,644 @@
+    
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta Http-Equiv="Cache-Control" Content="no-cache">
+    <meta Http-Equiv="Pragma" Content="no-cache">
+    <meta Http-Equiv="Expires" Content="0">
+    <meta Http-Equiv="Pragma-directive: no-cache">
+    <meta Http-Equiv="Cache-directive: no-cache">
+    <meta name="theme-color" content="#00af55">
+    <meta name="description" content='Agencia Digital de Innovación Pública “Sistema Abierto de Información Geográfica (SIGCDMX)” Disponible en https://sig.cdmx.gob.mx/'>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sistema Abierto de Información Geográfica (SIGCDMX)" />
+    <meta property="og:description" content='Agencia Digital de Innovación Pública “Sistema Abierto de Información Geográfica (SIGCDMX)” Disponible en https://sig.cdmx.gob.mx/' />
+    <meta property="og:url" content="http://sig.cdmx.gob.mx/datos/" />
+    <meta property="og:image" content="https://sig.cdmx.gob.mx/static/catastro/img/sig.jpg" />
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="588">
+    <meta property="og:image:height" content="300">
+    
+    <title>Datos - Sistema Abierto de Información Geográfica (SIGCDMX)</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sig.cdmx.gob.mx/static/catastro/img/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="https://sig.cdmx.gob.mx/static/catastro/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sig.cdmx.gob.mx/static/catastro/img/favicon-16x16.png">
+    <link rel="shortcut icon" href="https://sig.cdmx.gob.mx/static/catastro/img/favicon-16x16.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <!--<script src="https://kit.fontawesome.com/9ddb68378a.js"></script>-->
+    <link href="/static/catastro/css/app.css?v=2.10" rel="stylesheet" />
+    
+    
+    
+</head>
+<body>
+    <div id="top-bar" class="container-fluid">
+        <div class="d-inline">
+            <div class="row mx-0">
+                <div class="d-inline">
+                    <a class="navbar-brand title-site" href="/">
+                        <img src="/static/catastro/img/Logo_CDMX_alt.png" height="42" class="d-inline-block" alt="Sistema Abierto de Información Geográfica de la Ciudad de México">
+                    </a>
+                </div>
+                <div class="d-inline title-site pt-2">
+                    <span class="d-block">Sistema Abierto de Información</span>
+                    <span class="d-block">Geográfica de la Ciudad de México</span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="d-inline">
+
+        </div>
+    </div>
+    <div id="wrap">
+        
+        <div class="container">
+            
+<div class="alert alert-warn" id="status-message" hidden="hidden">
+    <a class="close" onclick="$('.alert').hide()">×</a>
+    <strong><p id="status-message-text">Placeholder for status-message</p></strong>
+    <p id="status-message-text-body">Placeholder for status-message-body</p>
+</div>
+
+            
+
+
+
+
+            
+
+            
+            <div class="row">
+                <div class="col-md-8">
+                
+                </div>
+                <div class="col-md-4">
+                
+                </div>
+            </div>
+            
+        </div>
+    
+    
+    <button onclick="topFunction()" id="myBtn" title="Índice"><i class="fas fa-arrow-alt-circle-up"></i></button>
+    <div class="container pt-5">
+        <div class="row my-5">
+            <h3>Sobre los datos</h3>
+            <div class="col-12 mx-2 my-4">
+                <blockquote class="blockquote" style="font-size: 1.1rem;">
+                    <h5>Información sobre los datos del Sistema Abierto de Información Geográfica</h5>
+                    <br>
+                    <lu>
+                        <li><a href="#fuente_datos">Fuentes de datos</a></li>
+                        <li><a href="#d_datos_cat">Descarga de datos del catastro</a></li>
+                        <li><a href="#dic_datos_cat">Diccionario de datos del catastro</a></li>
+                        <li><a href="#cficha_metadatos">Ficha de metadatos del catastro</a></li>
+                        <li><a href="#calculo_impuesto">Ejemplo del cálculo de impuesto predial</a></li>
+                        <li><a href="#preguntas_frecuentes">Preguntas frecuentes del SIGCDMX y del catastro</a></li>
+                        <li><a href="#cap_adicionales">Capas adicionales en el SIGCDMX</a></li>
+                        <li><a href="#como_citar">¿Cómo citar este recurso?</a></li>
+                    </lu>
+                    <br>
+                    <br>
+                    <h4 id="fuente_datos">Fuentes de datos</h4>
+                    <br>
+                    <h5>El SIGCDMX cuenta con dos fuentes de datos:</h5>
+                    <br>
+                    <lu>
+                        <li>El catastro de la Ciudad de México administrado  por la Secretaría de Administración y Finanzas.</li>
+                        <li>El registro de Uso de Suelo por predio administrado por la Secretaría de Desarrollo Urbano y Vivienda.</li>
+                    </lu>
+                    <br>
+                    <br>
+                    <h4 id="d_datos_cat">Descarga de datos del catastro</h4>
+                    <br>
+                    <h5>Descarga en esta sección los datos del catastro en formato de archivo plano o geográfico por alcaldía. En el formato de archivo plano se encuentran todos los datos por cuenta catastral. En el archivo geográfico, se encuentran todos los polígonos por predio. Un predio puede tener varias cuentas catastrales. Para relacionar una cuenta a su predio, utiliza la columna FID para relacionar la(s) cuenta(s) catastral(es) con su respectivo polígono.</h5>
+                    <br>
+                    <br>
+                    <!--<div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center; vertical-align: middle;" scope="col">Formatos de archivo plano</th>
+                                    <th style="text-align: center; vertical-align: middle;" scope="col">Formatos de archivo geográfico</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/121/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/122/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>-->
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Alcaldías</th>
+                                    <th style="text-align: center; vertical-align: middle;" scope="col">Formatos de archivo plano</th>
+                                    <th style="text-align: center; vertical-align: middle;" scope="col">Formatos de archivo geográfico</th>
+                                </tr>
+                            </thead>
+                            <tbody id ="tabla">
+                                <tr>
+                                    <td>Álvaro Obregón</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/75/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/97/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Azcapotzalco</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/76/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/98/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Benito Juárez</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/77/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/99/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Coyoacán</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/78/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/100/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Cuajimalpa</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/79/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/101/download" target="_blank">Descargar Shapefile</a></td>
+
+                                </tr>
+                                <tr>
+                                    <td>Cuauhtémoc</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/80/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/102/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gustavo A. Madero</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/81/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/104/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Iztacalco</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/82/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/103/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Iztapalapa</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/83/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/107/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Magdalena Contreras</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/84/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/105/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Miguel Hidalgo</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/85/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/106/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Milpa Alta</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/86/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/108/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Tláhuac</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/87/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/109/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Tlalpan</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/88/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/110/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Venustiano Carranza</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/89/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/112/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Xochimilco</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/90/download" target="_blank">Descargar CSV</a>
+                                        
+                                    </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/111/download" target="_blank">Descargar Shapefile</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <br>
+                    <h4 id="dic_datos_cat">Diccionario de datos del catastro</h4>
+                    <br>
+                    <h5>Para el conjunto de datos del catastro, el diccionario es el siguiente:</h5>
+                    <br>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Etiqueta</th>
+                                    <th scope="col">Descripción </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Calle y número del domicilio del predio</td>
+                                    <td>call_numero</td>
+                                    <td>Nombre de la calle o avenida y número exterior e interior del domicilio donde se ubica el predio. Esta dirección corresponde al registrado en el catastro de la Ciudad de México.</td>
+                                </tr>
+                                <tr>
+                                    <td>Código postal del domicilio del predio</td>
+                                    <td>codigo_postal</td>
+                                    <td>Código de cinco dígitos usado para la ubicación de zonas dentro de la CDMX. Corresponde al CP registrado en el catastro.</td>
+                                </tr>
+                                <tr>
+                                    <td>Colonia del domicilio del predio</td>
+                                    <td>colonia_predio</td>
+                                    <td>Colonia a la que pertenece el domicilio del predio. Una colonia corresponde a una delimitación territorial interna de las Alcaldías. Corresponde a la colonia registrada en el catastro.</td>
+                                </tr>
+                                <tr>
+                                    <td>Superficie del terreno (m2)</td>
+                                    <td>superficie_terreno</td>
+                                    <td>Área que corresponde a la delimitación del terreno del predio, expresada en metros cuadrados.</td>
+                                </tr>
+                                <tr>
+                                    <td>Superficie de construcción (m2)</td>
+                                    <td>superficie_construccion</td>
+                                    <td>Área que corresponde a la delimitación de la construcción dentro del predio, expresada en metros cuadrados.</td>
+                                </tr>
+                                <tr>
+                                    <td>Uso de la construccción</td>
+                                    <td>uso_construccion</td>
+                                    <td>Corresponde al fin del objeto de la construcción.<br>Los predios habitacionales califican para subsidios. Ver columna subsidios. Ver apartado  definiciones del Código Fiscal de la Ciudad de México.</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de rango de nivel</td>
+                                    <td>clave_rango_nivel</td>
+                                    <td>Corresponde a un rango del número de pisos que tiene una construcción. Ver apartado  definiciones del Código Fiscal de la Ciudad de México.</td>
+                                </tr>
+                                <!--<tr>
+                                    <td>Clase de la construcción</td>
+                                    <td>clase_construccion</td>
+                                    <td>Corresponde a la calidad que tiene una construcción. Ver apartado  definiciones del Código Fiscal de la Ciudad de México.</td>
+                                </tr>-->
+                                <tr>
+                                    <td>Año de la construcción o de la remodelación</td>
+                                    <td>anio_construccion</td>
+                                    <td>Indica el año en el que se realizó la construcción del predio o el año de la última remodelación. Se usa el dato más reciente. </td>
+                                </tr>
+                                <tr>
+                                    <td>Instalaciones especiales</td>
+                                    <td>instalaciones_especiales</td>
+                                    <td>Se entiende por instalaciones especiales, aquellas que se consideran indispensables o necesarias para el funcionamiento operacional del inmueble de acuerdo a su uso específico, tales como elevadores, escaleras electromecánicas, equipos de calefacción o aire lavado, sistema hidroneumático, equipos contra incendio. Ver apartado  definiciones del Código Fiscal de la Ciudad de México.</td>
+                                </tr>
+                                <tr>
+                                    <td>Valor unitario del suelo</td>
+                                    <td>valor_unitario_suelo</td>
+                                    <td>Corresponde al precio unitario por metro cuadrado. Este valor sólo es válido para cálculos del impuesto predial. </td>
+                                </tr>
+                                <tr>
+                                    <td>Valor del suelo</td>
+                                    <td>valor_suelo</td>
+                                    <td>Corresponde al resultado de la multiplicación del valor unitario del suelo por la superficie del terreno de la construcción.</td>
+                                </tr>
+                                <!--<tr>
+                                    <td>Impuesto anual con descuento del 8%</td>
+                                    <td>impuesto_ocho</td>
+                                    <td>Corresponde a un descuento que se otorga si el pago se realiza en enero por los seis bimestres del ejercicio fiscal vigente. De entrada se otorga para todos pero solo es efectivo si pagas en enero.</td>
+                                </tr>
+                                <tr>
+                                    <td>Impuesto anual con descuento del 5%</td>
+                                    <td>impuesto_cinco</td>
+                                    <td>Corresponde a un descuento que se otorga si el pago se realiza en febrero por los seis bimestres del ejercicio fiscal vigente. De entrada se otorga para todos pero solo es efectivo si pagas en febrero.</td>
+                                </tr>-->
+                                <tr>
+                                    <td>Clave de Valor Unitario del Suelo (VUS)</td>
+                                    <td>clave_valor_unitario_suelo</td>
+                                    <td>Corresponde a la colonia catastral a la que pertenece el predio. (Hay tres tipos (área, corredor, enclave)</td>
+                                </tr>
+                                <tr>
+                                    <td>Colonia del índice de cumplimiento</td>
+                                    <td>colonia_cumpliemiento</td>
+                                    <td>Corresponde al índice porcentual promedio de pago a nivel de colonia. Es decir, porcentaje de monto a nivel colonia.</td>
+                                </tr>
+                                <tr>
+                                    <td>Alcaldía del índice de cumplimiento</td>
+                                    <td>alcaldia_cumplimiento</td>
+                                    <td>Corresponde al índice porcentual promedio de pago a nivel de alcaldía. Es decir, porcentaje de monto a nivel alcaldía.</td>
+                                </tr>
+                                <tr>
+                                    <td>Monto de subsidio</td>
+                                    <td>subsidio</td>
+                                    <td>Corresponde al monto otorgado como el resultado de la aplicación de un beneficio por ser de uso habitacional.<br>Son descuentos de cuota fija para los rangos de tarifa que se encuentran en el código fiscal sección 130: A, B, C y D porcentajes de descuento para rangos E, F, G y descuentos para personas adultas mayores.</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center; vertical-align: middle;" colspan="3">
+                                        <a class="btn btn-success my-2" href="https://sig.cdmx.gob.mx/documents/117/download" target="_blank">Descarga aquí el diccionario PDF</a>
+                                        <a class="btn btn-success my-2" href="https://sig.cdmx.gob.mx/documents/96/download" target="_blank">Descarga aquí el diccionario XLSX</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <br>
+                    <h4 id="cficha_metadatos">Ficha de metadatos del catastro</h4>
+                    <br>
+                    <h5>Consulta aquí la ficha de metadatos.</h5>
+                    <br>
+                    <p style="text-align: center; vertical-align: middle;" colspan="3">
+                        <a class="btn btn-success my-2" href="https://sig.cdmx.gob.mx/documents/113/download" target="_blank">Ver ficha de metadatos PDF</a>
+                        <a class="btn btn-success my-2" href="https://sig.cdmx.gob.mx/documents/114/download" target="_blank">Ver ficha de metadatos XLSX</a>
+                    </p>
+                    <br>
+                    <br>
+                    <h4 id="calculo_impuesto">Ejemplo del cálculo de impuesto predial</h4>
+                    <br>
+                    <h5>Consulta aquí un ejemplo de cómo se calcula el impuesto predial.</h5>
+                    <br>
+                    <p style="text-align: center; vertical-align: middle;" colspan="3"><a class="btn btn-success" href="https://sig.cdmx.gob.mx/documents/115/download" target="_blank">Ver ejemplo de cálculo de impuesto predial</a></p>
+                    <br>
+                    <br>
+                    <h4 id="preguntas_frecuentes">Preguntas frecuentes del SIGCDMX y del catastro</h4>
+                    <br>
+                    <h5>¿Tienes alguna pregunta sobre el SIGCDMX o sobre los datos del catastro? Consulta aquí las preguntas frecuentes:</h5>
+                    <br>
+                    <p style="text-align: center; vertical-align: middle;" colspan="3"><a class="btn btn-success" href="/preguntas_frecuentes/" target="_blank">Ver preguntas frecuentes</a></p>
+                    <br>
+                    <br>
+                    <h4 id="cap_adicionales">Capas adicionales</h4>
+                    <br>
+                    <h5>Consulta todas las capas adicionales del SIGCDMX. Podrás encontrar los conjuntos de datos de uso de suelo normativo, servicios, medio ambiente, movilidad, así como  peligros y amenazas.</h5>
+                    <br>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Capa</th>
+                                    <th style="text-align: center; vertical-align: middle;" scope="col">Link al Portal de Datos Abiertos de la CDMX</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Puntos Wifi</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/ubicacion-acceso-gratuito-internet-wifi-c5/map/?location=10,19.3515,-99.1484" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Lunas</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/lunas/information/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Pilares</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/estatus-de-conectividad-en-pilares/custom/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Refugios</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/refugios/information/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Hospitales públicos y privados y Centros de Salud</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/hospitales-y-centros-de-salud/table/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Escuelas Privadas</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/escuelas-privadas/map/?location=10,19.37736,-99.14876" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Escuelas públicas</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/escuelas-publicas/map/?location=10,19.37361,-99.14314" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Uso de Suelo</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/uo-de-suelo/information/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Límites de velocidad</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/vialidades-de-la-ciudad-de-mexico/table/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Parquímetros</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/poligonos-comites/table/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Ciclovías</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/ciclovias/information/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Líneas y estaciones del Metro</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/lineas-y-estaciones-del-metro/table/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Estaciones del Metrobús</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/estaciones-metrobus/custom/?dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiQ09VTlQiLCJzY2llbnRpZmljRGlzcGxheSI6dHJ1ZSwiY29sb3IiOiIjNjZjMmE1In1dLCJ4QXhpcyI6ImxpbmVhIiwibWF4cG9pbnRzIjoxMDAsInNvcnQiOiIiLCJjb25maWciOnsiZGF0YXNldCI6ImVzdGFjaW9uZXMtbWV0cm9idXMiLCJvcHRpb25zIjp7fX19XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Líneas del Metrobús</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/lineas-y-estaciones-del-metro/table/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Corredores concesionados</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/gtfs-general-transit-feed-specifications-actualizado-de-la-ciudad-de-mexico/information/?location=10,19.4018,-99.1439" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>RTP</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/gtfs-general-transit-feed-specifications-actualizado-de-la-ciudad-de-mexico/information/?location=10,19.4018,-99.1440" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Trolebús</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/gtfs-general-transit-feed-specifications-actualizado-de-la-ciudad-de-mexico/information/?location=10,19.4018,-99.1441" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Suelo de conservación</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/suelo-de-conservacion/information/?location=10,19.32072,-99.15261" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Áreas naturales protegidas</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/areas-naturales-protegidas/information/?location=10,19.32072,-99.16481" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Áreas verdes de la CDMX</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/cdmx_areas_verdes_2017/information/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Susceptibilidad por laderas</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-susceptibilidad-por-laderas/table/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Inundaciones</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-inundaciones/information/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Sismos</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-sismico/information/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Fracturas de Suelo</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-vulnerabilidad-social-a-fracturamiento/custom/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Índice de vulnerabilidad social</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-indice-de-vulnerabilidad-social/custom/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Tormentas eléctricas</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-tormentas-electricas/custom/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Temperaturas mínimas</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-temperaturas-minimas/table/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Temperaturas máximas </td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-temperaturas-maximas/custom/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Precipitación</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-precipitacion/table/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Nevadas</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-nevadas/custom/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Granizo</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="https://datos.cdmx.gob.mx/explore/dataset/atlas-de-riesgo-granizo/information/" target="_blank">Ir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Indicadores de Peligro, Exposición y Vulnerabilidad a nivel AGEB</td>
+                                    <td style="text-align: center; vertical-align: middle;"><a class="btn btn-success" href="http://www.atlas.cdmx.gob.mx/indicadores/" target="_blank">Ir</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <br>
+                    <h4 id="como_citar">¿Cómo citar este recurso?</h4>
+                    <br>
+                    <h5>Si vas a citar este recurso, te sugerimos que lo hagas de esta forma:</h5>
+                    <br>
+                    <ul>
+                        <li>Agencia Digital de Innovación Pública “Sistema Abierto de Información Geográfica (SIGCDMX)” Disponible en: https://sig.cdmx.gob.mx/</li>
+                    </ul>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    
+    <footer class="footer">
+		<section id="section-bottom">
+            <div class="bottom-wrapper">
+                <div class="container-fluid">
+                    <div class="d-flex flex-column-reverse flex-md-row">
+                        <div class="col-12 col-sm-2 my-0 px-0">
+                            <img height="38" src="/static/catastro/img/logo_adip_bco.png" alt="CDMX/ADIP">
+                        </div>
+                        <div class="col-12 col-sm-10 mt-0 ml-1 px-0">
+                            <nav class="navbar navbar-expand-lg py-1 px-0">
+                                <div class="navbar-collapse">
+                                    <div>Sistema Abierto de Información Geográfica de la Ciudad de México<br>Diseñado y operado por la Agencia Digital de Innovación Pública</div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    
+<script>
+    $(".footer").css('position','fixed');
+</script>
+<script>
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130624596-22"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-130624596-22');
+</script>
+    
+<script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=133850302"></script>
+</body>
+</html>
